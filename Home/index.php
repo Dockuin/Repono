@@ -8,14 +8,14 @@
 
 		<!-- Tab Styling -->
 		<title>Robotics IMS</title>
-        <link rel="icon" href="./img/logo.png">
+        <link rel="icon" href="../img/logo.png">
 
         <!-- Responsive Design Tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<!-- Page Styling -->
 		<script src="https://kit.fontawesome.com/7daaf9098f.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./styleing.css">
+        <link rel="stylesheet" href="../styleing.css">
         
         <!-- Google reCAPTCHA CDN -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
