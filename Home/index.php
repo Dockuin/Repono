@@ -23,7 +23,7 @@
     </head>
     <body id="grad">
         <div class="col-logo-container">
-            <img class="logo" src="./img/titlelogo.png"/>
+            <img class="logo" src="../img/titlelogo.png"/>
         </div>
         <div class="col-login-container">
             <!-- Login Box -->
@@ -47,12 +47,12 @@
                     </div>
 				</form>
                 <div class="request-access">
-                    <a href="./request-access">Request Access</a>
+                    <a href="../request-access">Request Access</a>
                 </div>
 			</div>
         </div>
         <div class="footer">  
-            <p><a href="https://github.com/The-Iceburg"><img class="iceburg" src="./img/theiceburg.png"/></p>
+            <p><a href="https://github.com/The-Iceburg"><img class="iceburg" src="../img/theiceburg.png"/></p>
         </div>  
     </body>
 </html>
