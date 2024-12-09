@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Tab Styling -->
+		<title>Robotics IMS</title>
+        <link rel="icon" href="./img/logo.png">
+        <!-- Responsive Design Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- Page Styling -->
+        <style>
+            body {
+                background-color: #242424;
+                color: #ffffff;
+                text-align: center;
+            }
+            
+            .main-body-container {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .main-body {
+                background-color: #2b2b2b;
+                padding: 10px;
+                width: 70%;
+                text-align:left;
+            }
+            
+            hr.rounded {
+                border-top: 8px solid #ffffff;
+                border-radius: 5px;
+            }
+            
+            .footer a {
+                text-decoration: none;
+                color: #ffffff;
+                text-decoration: underline;
+            }
+            
+            .approve {
+                background-color: #5cdb5c;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 15px;
+            }
+            
+            .deny {
+                background-color: #ff0021;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 15px;
+            }
+            
+            @media only screen and (max-width: 768px) {
+                .main-body {
+                    width: 90%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-body-container">
+            <div class="main-body">
+                <hr class="rounded">
+                <div><h3>A new user has just requested access to Robotics IMS using the details below:</h3></div>
+                <div>
+                    <table class="account-info-text">
+                        <tr>
+                            <td>Username:</td>
+                            <td>{username}</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>{email}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div><h3>You can approve/deny their request here:</h3></div>
+                <a class="approve" href="https://www.theiceburg.net/robotics-ims/request-approve?requestId={requestID}">Approve</a>
+                <a class="deny" href="https://www.theiceburg.net/robotics-ims/request-deny?requestId={requestID}">Deny</a>
+                <hr class="rounded">
+            </div>
+        </div>
+        <div class="footer">
+            <p>This email was powered by <a href="theiceburg.net">The Iceburg</a></p>
+        </div>
+    </body>
+</html>

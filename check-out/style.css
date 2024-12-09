@@ -1,0 +1,91 @@
+* {
+    /* makes sure that the padding and border are included in the total width and height of the elements */
+    box-sizing: border-box;
+    font-family: Consolas, monaco, monospace;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#grad {
+    /* the background gradient for the login panel (which spans the whole content space (behind other elements)) */
+    min-height: 100vh;
+    background-color: #2b2b2b; /* for browsers that don't support gradients */
+    background-image: linear-gradient(to bottom right, red, blue);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 40;
+    list-style-type: none;
+    background-color: #242424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.welcome-container {
+    background-color: #2b2b2b;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.welcome-text {
+    color: #ffffff;
+    padding: 15px;
+
+}
+
+.account-info-container {
+    background-color: #2b2b2b;
+    border-radius: 25px;
+    width: 100%;
+    padding: 15px;
+    color: #ffffff;
+}
+
+form input[type="ims-id"] {
+    display: inline-block;
+    text-align: left;
+    width: 65%;
+    height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid #242424;
+    padding: 0 15px;
+    border-radius: 25px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    background-color: #242424;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 500px) {
+    .welcome-container {
+        padding-top: 30px;
+    }
+}
