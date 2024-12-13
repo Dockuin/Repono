@@ -11,7 +11,7 @@ class dbQS {
     private $DATABASE_NAME;
     protected $stmt;
     protected $conn;
-    private $partID;
+    private $result;
 
     // Constructor method
     // Various data for accessing the database is input (or passed by default where an = is used)
@@ -41,18 +41,18 @@ class dbQS {
         $this->conn->close();
     }
 
-    function query($heading, $input = '') {
+    function query($heading, $input = '', $requestFiltering) {
         $this->connect();
-        $this->stmt = $this->conn->prepare("SELECT $heading FROM $this->table WHERE Barcode = ?");
+        $this->stmt = $this->conn->prepare("SELECT " . $heading . " FROM $this->table " . $requestFiltering);
         $this->stmt->bind_param("s", $input);
         $this->stmt->execute();
-        $this->stmt->bind_result($this->partID);
+        $this->stmt->bind_result($this->result);
         $this->stmt->fetch();
         $this->stmt->close();
 
         $this->destroy_connection();
 
-        return $this->partID;
+        return $this->result;
 
     }
 
@@ -101,16 +101,16 @@ $DATABASE_NAME = 'inventory';
 
 $classTest = new dbQS($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 $classTest->set_table('parts');
-$res = $classTest->query('Part_Description',635963686499);
+$res = $classTest->query('Part_Description',635963686499, "WHERE Barcode = ?");
+$res1 = $classTest->query('Part_Description',"REV-31-1108", "WHERE Part_ID = ?");
+$res1 = $classTest->query('Part_Description',"REV-31-1108", "");
 
 echo $res;
 echo "\n";
+echo $res1;
 
-$accountTest = new account();
-$accountTest->generate_data("User1", password_hash("Testing", PASSWORD_DEFAULT), "test@test.com");
-$res = $accountTest->get_password("Test");
-
-
-
-echo $res;
+// $accountTest = new account();
+// $accountTest->generate_data("User1", password_hash("Testing", PASSWORD_DEFAULT), "test@test.com");
+// $res = $accountTest->get_password("Test");
+// echo $res;
  
