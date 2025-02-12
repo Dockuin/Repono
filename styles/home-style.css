@@ -28,7 +28,7 @@ li a {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     width: 95%;
-    left: 50px;
+    align-items: right;
     padding-top: 15px;
 }
 

@@ -1,13 +1,20 @@
-nav .sidebar {
+sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 5%;
+    width: 15%;
     height: 100%;
     z-index: 40;
     list-style-type: none;
     background-color: #242424;
-    display: flex;
+    display: inline-flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+li {
+    box-shadow: #FF0000;
+    color: white;
+    text-align: right;
 }
