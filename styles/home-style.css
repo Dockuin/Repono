@@ -11,24 +11,8 @@
   display: none;
 }
 
-#grad {
-    /* the background gradient for the login panel (which spans the whole content space (behind other elements)) */
-    height: 100vh;
-    background-color: #2b2b2b; /* for browsers that don't support gradients */
-    background-image: linear-gradient(to bottom right, red, blue);
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 40;
-    list-style-type: none;
-    background-color: #242424;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  background-color: #303030;
 }
 
 li a {

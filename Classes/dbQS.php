@@ -2,7 +2,7 @@
 // Creates the class - named dbQS [database Query System]
 class dbQS {
     // Creates a number of attributes for the class with various levels of permissions
-    // Private = Cannot be accessed anywhere other than the dbQS class
+    // Private = Cannot be accessed anywgithere other than the dbQS class
     // Protected = Can be accessed by dbQS and child classes
     protected $table;
     private $DATABASE_HOST;
@@ -94,23 +94,23 @@ class account extends dbQS {
     }
 }
 
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'inventory';
+// $DATABASE_HOST = 'localhost';
+// $DATABASE_USER = 'root';
+// $DATABASE_PASS = '';
+// $DATABASE_NAME = 'inventory';
 
-$classTest = new dbQS($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-$classTest->set_table('parts');
-$res = $classTest->query('Part_Description',635963686499, "WHERE Barcode = ?");
-$res1 = $classTest->query('Part_Description',"REV-31-1108", "WHERE Part_ID = ?");
-$res1 = $classTest->query('Part_Description',"REV-31-1108", "");
+// $classTest = new dbQS($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+// $classTest->set_table('parts');
+// $res = $classTest->query('Part_Description',635963686499, "WHERE Barcode = ?");
+// $res1 = $classTest->query('Part_Description',"REV-31-1108", "WHERE Part_ID = ?");
+// $res1 = $classTest->query('Part_Description',"test_input", "");
 
-echo $res;
-echo "\n";
-echo $res1;
+// echo $res;
+// echo "\n";
+// echo $res1;
 
 // $accountTest = new account();
 // $accountTest->generate_data("User1", password_hash("Testing", PASSWORD_DEFAULT), "test@test.com");
-// $res = $accountTest->get_password("Test");
+// $res = $accountTest->get_password("Tes");
 // echo $res;
  

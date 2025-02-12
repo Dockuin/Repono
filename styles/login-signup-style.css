@@ -1,14 +1,13 @@
 * {
+    --background-default: #303030;
+    --container: #424242;
     /* makes sure that the padding and border are included in the total width and height of the elements */
     box-sizing: border-box;
     font-family: Consolas, monaco, monospace;
 }
 
-#grad {
-    /* the background gradient for the login panel (which spans the whole content space (behind other elements)) */
-    height: 90vh;
-    background-color: #2b2b2b; /* for browsers that don't support gradients */
-    background-image: linear-gradient(to bottom right, red, blue);
+#background {
+    background-color: var(--background-default);
 }
 
 .col-logo-container {
@@ -25,14 +24,7 @@
     align-items: center;
 }
 
-.logo {
-    /* the ROBOTICS IMS Logo */
-    max-width: 90%;
-    max-height: 90%;
-}
-
-
-.col-login-container {
+.col-info-container {
     /* the right hand column of the webpage holding the login container */
     width: 50%;
     height: 90vh;
@@ -45,22 +37,32 @@
     align-items: center;
 }
 
-.login-container {
+.info-container {
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 25%;
     /* the login container */
-    background-color: #2b2b2b;
-    border-radius: 25px;
-    width: 60%;
-    text-align: center;
+    background-color: var(--container);
+    border-radius: 25px;    
 }
 
-.login-container h2 {
+.change-page {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: -15%;
+    margin: 10px;
+}
+
+.info-container h2, a {
     text-align: center;
     color: #ffffff;
     font-size: 24px;
     padding: 10px 10px 0px 10px;
 }
 
-.login-container form label {
+.info-container form label {
     padding: 15px 8px 17px 15px;
     width: 15%;
     height: 50px;
@@ -70,7 +72,7 @@
     border-bottom-left-radius: 25px;
 }
 
-.login-container form input[type="password"], .login-container form input[type="text"] {
+.info-container form input[type="password"], .info-container form input[type="text"] {
     display: inline-block;
     text-align: left;
     width: 65%;
@@ -82,7 +84,22 @@
     border-bottom-right-radius: 25px;
 }
 
-.login-container form input[type="submit"] {
+.info-container a {
+    position: relative;
+    left: 35%;
+    text-decoration: none;
+    width: 30%;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    background-color: #242424;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 25px;
+}
+
+.info-container form input[type="submit"] {
     width: 80%;
     text-align: center;
     padding: 15px 0px 15px 0px;
@@ -94,19 +111,6 @@
     border-radius: 25px;
 }
 
-.request-access {
-    padding-bottom: 15px;
-    padding-top: 5px;
-}
-.request-access a {
-    text-decoration: none;
-    color: #ffffff;
-    text-decoration-line: underline;
-}
-
-.g-recaptcha {
-    padding-left: 5%;
-}
 .footer {
     /* the page footer */
     position: fixed;
@@ -135,10 +139,10 @@
       height: 45vh;
       left: 0%;
     }
-    .col-login-container {
+    .col-info-container {
         top: 45vh;
     }
-    .login-container {
+    .info-container {
         width: 90%;
     }
 }
