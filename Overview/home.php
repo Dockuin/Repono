@@ -23,17 +23,23 @@ if (!isset($_SESSION['loggedin'])) {
 		<script src="https://kit.fontawesome.com/7daaf9098f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../styles/home-style.css">
         <link rel="stylesheet" href="../styles/nav-style.css">
+        <link rel="stylesheet" href="../styles/sidebar-style.css">
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script>
-        $(function(){
-        $("#includedContent").load("../nav-bar.htm"); 
-        });
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '../' + $(this).data('include') + '.htm'
+                $(this).load(file)
+            })
+        })
         </script>
 
     </head>
     <body id="grad">
-        <div id="includedContent"></div>
+        <div data-include="nav-bar"></div>
+        <div data-include="sidebar"></div>
         <div class="welcome-container">
             <h3 class="welcome-text">Welcome back, <?=$_SESSION['name']?>!</h3>
         </div>

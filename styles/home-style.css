@@ -27,7 +27,8 @@ li a {
     background-color: #2b2b2b;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    width: 100%;
+    width: 95%;
+    left: 50px;
     padding-top: 15px;
 }
 

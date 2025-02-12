@@ -1,12 +1,13 @@
-nav .nav-bar {
+nav .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 5%;
+    height: 100%;
     z-index: 40;
     list-style-type: none;
     background-color: #242424;
     display: flex;
-    justify-content: right;
-    align-items: right;
+    justify-content: center;
+    align-items: center;
 }
